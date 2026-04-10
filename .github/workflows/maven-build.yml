@@ -2,6 +2,11 @@ name: Maven Build
 on: [push]
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
+permissions:
+  contents: read
+  checks: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,8 +28,3 @@ jobs:
           detailed_summary: true
           include_passed: true
           check_title_template: "{{SUITE_NAME}}/{{TEST_NAME}}"
-      - run: |
-          gh issue --repo ${{ github.repository }} \
-            create --title "Issue title" --body "Issue body"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
