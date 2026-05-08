@@ -98,9 +98,6 @@
         </plugins>
     </build>
 
-    <!-- ========================================================== -->
-    <!-- SECCIÓN DE REPORTING                                       -->
-    <!-- ========================================================== -->
     <reporting>
         <plugins>
             <!-- Informes básicos del proyecto -->
@@ -110,7 +107,7 @@
                 <version>3.5.0</version>
             </plugin>
 
-            <!-- Javadoc: SOLO javadoc, SIN test-javadoc -->
+            <!-- Javadoc -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -120,7 +117,6 @@
                         <id>default</id>
                         <reports>
                             <report>javadoc</report>
-                            <!-- ELIMINADO: test-javadoc causa error si no hay clases públicas en test -->
                         </reports>
                     </reportSet>
                 </reportSets>
@@ -161,19 +157,8 @@
                 <version>4.8.5.0</version>
             </plugin>
 
-            <!-- Dependency Check -->
-            <plugin>
-                <groupId>org.owasp</groupId>
-                <artifactId>dependency-check-maven</artifactId>
-                <version>9.0.9</version>
-                <reportSets>
-                    <reportSet>
-                        <reports>
-                            <report>aggregate</report>
-                        </reports>
-                    </reportSet>
-                </reportSets>
-            </plugin>
+            <!-- ELIMINADO: dependency-check-maven
+                 Falla por error 403/404 al conectar con la NVD sin API key -->
 
             <!-- JaCoCo -->
             <plugin>
