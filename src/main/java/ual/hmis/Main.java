@@ -1,4 +1,4 @@
-package main.java.ual.hmis;
+package ual.hmis;
 
 import java.nio.file.Files;
 import java.nio.file.Path;

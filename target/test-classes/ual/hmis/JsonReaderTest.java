@@ -1,4 +1,4 @@
-package test.java.ual.hmis;
+package ual.hmis;
 
 import static org.junit.jupiter.api.Assertions.*;
 
