@@ -1,0 +1,28 @@
+{
+  "coches": [
+    {
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "año": 2022,
+      "precio": 22000
+    },
+    {
+      "marca": "Honda",
+      "modelo": "Civic",
+      "año": 2021,
+      "precio": 21000
+    },
+    {
+      "marca": "Ford",
+      "modelo": "Focus",
+      "año": 2020,
+      "precio": 19000
+    },
+    {
+      "marca": "Hyundai",
+      "modelo": "i30",
+      "año": 2023,
+      "precio": 24000
+    }
+  ]
+}
