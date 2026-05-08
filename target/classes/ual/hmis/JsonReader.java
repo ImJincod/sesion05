@@ -1,4 +1,4 @@
-package org.hmis;
+package main.java.ual.hmis;
 
 import java.io.FileReader;
 

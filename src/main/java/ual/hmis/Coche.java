@@ -1,4 +1,4 @@
-package ual.hmis;
+package main.java.ual.hmis;
 
 import java.util.Objects;
 
