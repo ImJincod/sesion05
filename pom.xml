@@ -99,7 +99,7 @@
     </build>
 
     <!-- ========================================================== -->
-    <!-- SECCIÓN DE REPORTING: Añade esto para generar los informes -->
+    <!-- SECCIÓN DE REPORTING                                       -->
     <!-- ========================================================== -->
     <reporting>
         <plugins>
@@ -110,7 +110,7 @@
                 <version>3.5.0</version>
             </plugin>
 
-            <!-- Javadoc -->
+            <!-- Javadoc: SOLO javadoc, SIN test-javadoc -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
@@ -120,7 +120,7 @@
                         <id>default</id>
                         <reports>
                             <report>javadoc</report>
-                            <report>test-javadoc</report>
+                            <!-- ELIMINADO: test-javadoc causa error si no hay clases públicas en test -->
                         </reports>
                     </reportSet>
                 </reportSets>
@@ -140,14 +140,14 @@
                 </configuration>
             </plugin>
 
-            <!-- Source Xref (código fuente cruzado) -->
+            <!-- Source Xref -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
                 <version>3.3.2</version>
             </plugin>
 
-            <!-- PMD y CPD (detección de código duplicado) -->
+            <!-- PMD y CPD -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
@@ -161,7 +161,7 @@
                 <version>4.8.5.0</version>
             </plugin>
 
-            <!-- Dependency Check (vulnerabilidades) -->
+            <!-- Dependency Check -->
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
@@ -175,7 +175,7 @@
                 </reportSets>
             </plugin>
 
-            <!-- JaCoCo (reporte de cobertura en el site) -->
+            <!-- JaCoCo -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
