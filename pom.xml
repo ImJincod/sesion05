@@ -172,11 +172,11 @@
                     </execution>
                 </executions>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>${owasp.version}</version>
+                <version>9.0.9</version>
                 <configuration>
                     <formats>
                         <format>HTML</format>
